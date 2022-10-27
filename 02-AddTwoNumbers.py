@@ -1,10 +1,8 @@
-from typing import List
-
+# create a class for ListNode
 class ListNode:
     def __init__(self, x):
         self.val = x
-        self.next = None
-
+        self.next = None            
 
 def AddTwoNumbers(l1, l2):
     """
@@ -42,12 +40,27 @@ def AddTwoNumbers(l1, l2):
 
 
 if __name__ == "__main__":
-    n1 = ListNode(2)
-    n1.next = ListNode(4)
+    # 4321
+    n1 = ListNode(1)
+    n1.next = ListNode(2)
     n1.next.next = ListNode(3)
+    n1.next.next.next = ListNode(4)
 
-    n2 = ListNode(5)
-    n2.next = ListNode(6)
-    n2.next.next = ListNode(4)
+    # 9876
+    n2 = ListNode(6)
+    n2.next = ListNode(7)
+    n2.next.next = ListNode(8)
+    n2.next.next.next = ListNode(9)
 
-    print(AddTwoNumbers(n1, n2).val, AddTwoNumbers(n1, n2).next.val, AddTwoNumbers(n1, n2).next.next.val)
+    sum = AddTwoNumbers(n1, n2)
+
+    # print
+    ans = ""
+    if sum.val != None:
+        ans = ans + str(sum.val)
+        while sum.next != None:
+            ans = ans + str(sum.next.val)
+            sum = sum.next
+
+    print(ans)
+    print(ans[::-1])
