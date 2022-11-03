@@ -1,4 +1,4 @@
-def TwoSum(nums, target):
+def twoSum(nums, target):
     """
     :type nums: List[int]
     :type target: int
@@ -12,10 +12,13 @@ def TwoSum(nums, target):
     
     # iterate through the nums array
     for i in range(len(nums)):
-        # if found the minuend, return the indexes
+
+        # based on the current number/element if found the minuend in the dictionary
+        # return the indexes of that from the dictionary, and the current element index
         if target - nums[i] in required:
             return [required[target - nums[i]],i]
-        # for each element find the subtrahend 
+        
+        # add the minuend and its index to the dictionary
         else:
             required[nums[i]] = i
     
@@ -24,5 +27,5 @@ def TwoSum(nums, target):
 
 if __name__ == "__main__":
     n = [2, 7, 11, 15]
-    t = 3
-    print(TwoSum(n, t))
+    t = 18
+    print("twoSum( array:", n, ", target:", t, ") -->", twoSum(n, t))
