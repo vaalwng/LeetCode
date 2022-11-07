@@ -1,2 +1,2 @@
 # LeetCode
-answering leetcode questions using python
+answering blind75 & grind75 leetcode questions using python
