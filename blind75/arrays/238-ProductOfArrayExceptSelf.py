@@ -5,7 +5,11 @@ def productExceptSelf(nums):
     """
 
     # 2-Pass approach
+
+    # declare len variable for the sake of convenience
     l = len(nums)
+
+    # handle an empty array
     if len == 0 or nums is None:
         return nums
     
@@ -15,15 +19,12 @@ def productExceptSelf(nums):
     # left
     for i in range(1, l):
         ans[i] = nums[i-1] * ans[i-1]
-        print(i, ans)    
 
-    print("")
     # right
     right = 1
     for i in range(l - 1, -1, -1 ):
         ans[i] *= right
-        right *= nums[i]
-        print(i, ans)    
+        right *= nums[i] 
     
     return ans
 
@@ -62,8 +63,7 @@ def productExceptSelf(nums):
 
 if __name__ == "__main__":
     arr = [1,2,3,4]
-    productExceptSelf(arr)
-    # print(productExceptSelf(arr))
+    print(productExceptSelf(arr))
 
-    # arr2 = [-1,1,0,-3,3]
-    # print(productExceptSelf(arr2))
+    arr2 = [-1,1,0,-3,3]
+    print(productExceptSelf(arr2))
