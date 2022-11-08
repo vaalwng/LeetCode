@@ -1,8 +1,6 @@
-# create a class for ListNode
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None     
+from LinkedListImpl import ListNode
+from LinkedListImpl import createLinkedList
+from LinkedListImpl import linkedListToString
 
 def reverseLinkedList(head):
     """
@@ -26,25 +24,10 @@ def reverseLinkedList(head):
     
     return prev
 
-def linkedListToString(head):
-    s = ""
-    if head.val != None:
-        s = s + str(head.val)
-        while head.next != None:
-            s = s + str(head.next.val)
-            head = head.next
-    
-    return s
-
 if __name__ == "__main__":
 
-    # [1, 2, 3, 4]
-    n1 = ListNode(1)
-    n1.next = ListNode(2)
-    n1.next.next = ListNode(3)
-    n1.next.next.next = ListNode(4)
-
-    print(linkedListToString(n1))
-    
-    sum = reverseLinkedList(n1)
-    print(linkedListToString(sum))
+    arr = [1,2,3,4,5]
+    l = createLinkedList(arr)
+    print(linkedListToString(l))
+    rL = reverseLinkedList(l)
+    print(linkedListToString(rL))
