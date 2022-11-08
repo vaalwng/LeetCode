@@ -4,6 +4,7 @@ class ListNode:
         self.val = x
         self.next = None
 
+# creates a cycle between the last node and the node in the given element
 def createCycle(head, tPos):
     temp = head
     count = 0
