@@ -1,4 +1,4 @@
-# create a class for ListNode
+# LinkedList class definition
 class ListNode:
     def __init__(self, x):
         self.val = x
