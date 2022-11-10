@@ -1,7 +1,5 @@
 from LinkedListImpl import ListNode
 from LinkedListImpl import createLinkedList
-from LinkedListImpl import linkedListToString
-from LinkedListImpl import createCycle
 
 def hasCycle(head):
     """
@@ -25,7 +23,7 @@ if __name__ == "__main__":
     arr = [3,2,0,-4]
     l = createLinkedList(arr)
     print(arr)
-    print(linkedListToString(l))
-    print(hasCycle(l))
-    c = createCycle(l, 1)
-    print(hasCycle(c))
+    print(l.linkedListToString())
+    print(l.hasCycle())
+    c = l.createCycle(1)
+    print(l.hasCycle())

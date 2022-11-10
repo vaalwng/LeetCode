@@ -1,6 +1,5 @@
 from LinkedListImpl import ListNode
 from LinkedListImpl import createLinkedList
-from LinkedListImpl import linkedListToString
 
 def reverseLinkedList(head):
     """
@@ -25,9 +24,8 @@ def reverseLinkedList(head):
     return prev
 
 if __name__ == "__main__":
-
     arr = [1,2,3,4,5]
     l = createLinkedList(arr)
-    print(linkedListToString(l))
+    print(l.linkedListToString())
     rL = reverseLinkedList(l)
-    print(linkedListToString(rL))
+    print(rL.linkedListToString())

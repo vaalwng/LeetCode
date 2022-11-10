@@ -1,6 +1,5 @@
 from LinkedListImpl import ListNode
 from LinkedListImpl import createLinkedList
-from LinkedListImpl import linkedListToString
 
 def mergeTwoSortedLists(list1, list2):
     """
@@ -50,8 +49,8 @@ if __name__ == "__main__":
     arr2 = [3,5,7]
     l1 = createLinkedList(arr1)
     l2 = createLinkedList(arr2)
-    print(linkedListToString(l1))
-    print(linkedListToString(l2))
+    print(l1.linkedListToString())
+    print(l2.linkedListToString())
 
     sortedList = mergeTwoSortedLists(l1, l2)
-    print(linkedListToString(sortedList))
+    print(sortedList.linkedListToString())
