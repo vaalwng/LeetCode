@@ -12,4 +12,5 @@ def hammingWeight(n):
     return count
 
 if __name__ == "__main__":
+    print(hammingWeight(0o00000000000000000000000000001011))
     print(hammingWeight(0o11111111111111111111111111111101))
