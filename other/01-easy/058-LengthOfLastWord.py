@@ -9,6 +9,6 @@ def lengthOfLastWord(s):
 
 if __name__ == "__main__":
     s = "   fly me   to   the moon  "
-    print(lengthOfLastWord(s))
+    print(s, "\t -> length of last word:", lengthOfLastWord(s))
     s2 = "luffy is still joyboy"
-    print(lengthOfLastWord(s2))
+    print(s2, "\t -> length of last word:", lengthOfLastWord(s2))

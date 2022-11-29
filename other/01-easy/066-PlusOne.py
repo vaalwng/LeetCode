@@ -24,5 +24,7 @@ def plusOne(digits):
     return res
 
 if __name__ == "__main__":
-    lst = [1,2,9]
-    print(plusOne(lst))
+    lst = [1,2,3]
+    print(lst, " + 1 -> ", plusOne(lst))
+    lst2 = [1,3,9]
+    print(lst2, " + 1 -> ", plusOne(lst2))
