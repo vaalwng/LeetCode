@@ -27,6 +27,8 @@ def longestPalinDrome(s):
 
 if __name__ == "__main__":
     s = "babad"
-    print(s, longestPalinDrome(s))
+    print(s)
+    print(longestPalinDrome(s) + "\n")
     s2 = "cbbd"
-    print(s2, longestPalinDrome(s2))
+    print(s2)
+    print(longestPalinDrome(s2) + "\n")

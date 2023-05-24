@@ -6,13 +6,14 @@ def romanToInteger(s):
     # roman numeral mappings
     numerals = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 
-    # lenth of string
+    # length of string
     l = len(s)
 
     # stores result
     num = numerals[s[l-1]]
 
     # iterate from right to left
+    # note: range(start_value, stop_value (exclusive), step_value)
     for i in range(l - 2, -1, -1):
         # identify if char at right of current char is bigger or smaller
         if numerals[s[i]] >= numerals[s[i+1]]:
@@ -23,4 +24,8 @@ def romanToInteger(s):
     return num
     
 if __name__ == "__main__":
-    print(romanToInteger("MCMXCIV"))
+    print(romanToInteger("III"))
+    print(romanToInteger("IV"))
+    print(romanToInteger("VI"))
+    # print(romanToInteger("LVIII"))
+    # print(romanToInteger("MCMXCIV"))

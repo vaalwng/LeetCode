@@ -22,3 +22,5 @@ def isPalindromeNumber(x):
 
 if __name__ == "__main__":
     print(isPalindromeNumber(123))
+    print(isPalindromeNumber(-121))
+    print(isPalindromeNumber(10))
