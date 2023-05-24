@@ -9,23 +9,20 @@ def romanToInteger(s):
     # length of string
     l = len(s)
 
-    # stores result
+    # stores result, start with the value of the last char
     num = numerals[s[l-1]]
 
     # iterate from right to left
     # note: range(start_value, stop_value (exclusive), step_value)
     for i in range(l - 2, -1, -1):
         # identify if char at right of current char is bigger or smaller
-        if numerals[s[i]] >= numerals[s[i+1]]:
+        if numerals[s[i]] >= numerals[s[i+1]]: # if current is bigger or equal to the char at right
             num += numerals[s[i]]
         else:
-            num -= numerals[s[i]]
-    
+            num -= numerals[s[i]]                
     return num
     
 if __name__ == "__main__":
     print(romanToInteger("III"))
-    print(romanToInteger("IV"))
-    print(romanToInteger("VI"))
-    # print(romanToInteger("LVIII"))
-    # print(romanToInteger("MCMXCIV"))
+    print(romanToInteger("LVIII"))
+    print(romanToInteger("MCMXCIV"))
